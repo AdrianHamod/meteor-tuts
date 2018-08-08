@@ -14,5 +14,10 @@ Meteor.methods({
         }
 
         return true;
+    },
+
+    'user.get' (id){
+        return Meteor.users.findOne(id);
     }
+
 });

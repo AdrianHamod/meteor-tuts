@@ -1,9 +1,9 @@
 import {Mongo} from "meteor/mongo";
-import PostSchema from './schema'
+import CommentsSchema from './schema';
 
-const Posts = new Mongo.Collection('posts');
+const Comments = new Mongo.Collection('comments');
 
-Posts.allow({
+Comments.allow({
     insert: function() {
         return true;
     },
@@ -15,6 +15,6 @@ Posts.allow({
     }
 })
 
-Posts.attachSchema(PostSchema);
+Comments.attachSchema(CommentsSchema);
 
-export default Posts;
+export default Comments;

@@ -1,9 +1,10 @@
-import {Meteor} from 'meteor/meteor'
-import {Users} from '/db';
+import { Users } from '/imports/db/index';
+import { Meteor } from 'meteor/meteor'
 import { Accounts } from 'meteor/accounts-base'
 
-Meteor.methods({
-    'user.register' (data) {
+class UserService{
+
+    static registerUser (data) {
         const user = Users.findOne({'emails.0.address': data.email});
 
         if (user) {
@@ -16,4 +17,6 @@ Meteor.methods({
             password: data.password
         });
     }
-});
+}
+
+export default UserService

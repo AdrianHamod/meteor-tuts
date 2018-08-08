@@ -1,16 +1,17 @@
-import {Meteor} from 'meteor/meteor'
-import {Posts} from '/db';
+import {Posts} from '/imports/db/index';
+// import {Posts} from '/db';
 
-Meteor.methods({
-    'post.create'(post) {
+class PostService{
+
+    static createPost(post) {
         Posts.insert(post);
-    },
+    }
 
-    'post.list' () {
+    static listPosts () {
         return Posts.find().fetch();
-    },
+    }
 
-    'post.edit' (_id, post) {
+    static editPost (_id, post) {
         Posts.update(_id, {
             $set: {
                 title: post.title,
@@ -18,23 +19,25 @@ Meteor.methods({
                 type: post.type
             }
         });
-    },
+    }
 
-    'post.incrementViews' (_id){
+    static incrementViews(_id){
         Posts.update(_id, {
             $inc:{
                 views: 1
             }
         });
-    },
+    }
 
-    'post.remove' (_id){
+    static removePost (_id){
         Posts.remove(_id);
-    },
+    }
 
-    'post.get' (_id) {
+    static getPost (_id) {
         return Posts.findOne(_id);
     }
 
-    
-});
+   
+}
+
+export default PostService

@@ -2,21 +2,58 @@
   "name": "meteor-tuts",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run --settings settings.json",
+    "test": "meteor test --driver-package practicalmeteor:mocha --settings settings.json",
+    "lint": "eslint . --ext .jsx --fix"
   },
+  "extends":[
+    "prettier",
+    "prettier/react"
+  ],
+  "prettier/prettier":[
+    "error",
+    {
+      "trailingComma": "es5",
+      "singleQuote": true,
+      "printWidth": 120
+    }
+  ],
+  "plugins":[
+      "prettier"
+  ],
   "dependencies": {
-    "@babel/runtime": "^7.0.0-beta.36",
+    "@babel/runtime": "^7.0.0-beta.54",
     "bcrypt": "^1.0.3",
     "history": "^4.7.2",
+    "imports": "^1.0.0",
     "meteor-node-stubs": "^0.3.2",
-    "moment": "^2.20.1",
+    "moment": "^2.22.2",
     "prop-types": "^15.6.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "simpl-schema": "^1.4.2",
-    "uniforms": "^1.23.0",
-    "uniforms-unstyled": "^1.23.0"
-  }
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "simpl-schema": "^1.5.3",
+    "underscore": "^1.9.1",
+    "uniforms": "^1.25.0",
+    "uniforms-unstyled": "^1.25.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.0.1",
+    "babel-eslint": "^8.2.6",
+    "css-mqpacker": "^7.0.0",
+    "eslint": "^5.3.0",
+    "eslint-import-resolver-meteor": "^0.4.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-meteor": "^5.0.0",
+    "eslint-plugin-react": "^7.10.0",
+    "lint-staged": "^7.2.0",
+    "postcss-csso": "^3.0.0",
+    "pre-commit": "^1.2.2"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.jsx": "eslint --fix"
+  },
+  "pre-commit": "lint-staged"
 }

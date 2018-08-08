@@ -3,8 +3,8 @@ import SimplSchema from 'simpl-schema';
 export default new SimplSchema({
     title: String,
     description: String,
-    userId: {
-        type: String,
-        optional: true
-    }
+    userId: String,
+    views: Number ,
+    createdAt: Date,
+    type: String,
 });

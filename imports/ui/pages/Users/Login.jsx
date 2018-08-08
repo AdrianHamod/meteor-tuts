@@ -1,4 +1,5 @@
 import React from 'react';
+import Meteor from 'meteor/meteor'
 import {AutoForm, AutoField, ErrorsField} from 'uniforms-unstyled';
 import SimpleSchema from 'simpl-schema';
 
@@ -23,8 +24,7 @@ export default class Login extends React.Component {
                 <AutoForm onSubmit={this.handleLogin} schema={LoginSchema}>
                     <ErrorsField/>
 
-                    <AutoField name="email"
-                               placeholder="Email"/>
+                    <AutoField name="email" placeholder="Email"/>
 
                     <AutoField name="password" type="password" placeholder="Password"/>
 

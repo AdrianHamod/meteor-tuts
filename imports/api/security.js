@@ -1,4 +1,5 @@
 import { Roles } from 'meteor/alanning:roles';
+import { Meteor } from 'meteor/meteor'
 
 export default class Security {
     static checkRole(userId, role) {
