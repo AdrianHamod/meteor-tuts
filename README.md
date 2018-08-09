@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hello and Welcome!
 Meteor-Tuts is one of the projects closest to our hearts designed as a useful tool for any programmer
 that wants to step up his/her game. Navigating through this complex but rather easy to understand tutorial you will be 
@@ -14,3 +15,7 @@ we created for you several branches, each of them being an iteration of the tuto
 meteor npm install # to install all the dependencies
 npm run start # to run the project
 ```
+=======
+# meteor-tuts
+meteor tutorial
+>>>>>>> 0c9415f4bf4e7c18405826e35bdf4eb2a72016c7
