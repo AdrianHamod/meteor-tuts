@@ -1,7 +1,7 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Posts } from '/db';
-import Meteor from 'meteor/meteor'
+import { Meteor } from 'meteor/meteor'
 
 class PostListReactive extends React.Component {
     constructor() {

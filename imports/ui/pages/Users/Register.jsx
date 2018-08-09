@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import Meteor from 'meteor/meteor'
-import {AutoForm, AutoField, ErrorsField} from 'uniforms-unstyled';
+import React, { Component } from 'react';
+import { Meteor } from 'meteor/meteor'
+import { AutoForm, AutoField, ErrorsField } from 'uniforms-unstyled';
 import SimpleSchema from 'simpl-schema';
 
 export default class Register extends Component {
@@ -28,10 +28,10 @@ export default class Register extends Component {
         return (
             <div className="authentication">
                 <AutoForm schema={RegisterSchema} onSubmit={this.onSubmit}>
-                    <ErrorsField/>
-                    <AutoField name="email" placeholder="Email"/>
-                    <AutoField name="password" type="password" placeholder="Password *"/>
-                    <AutoField name="confirm_password" type="password" placeholder="Confirm password"/>
+                    <ErrorsField />
+                    <AutoField name="email" placeholder="Email" />
+                    <AutoField name="password" type="password" placeholder="Password *" />
+                    <AutoField name="confirm_password" type="password" placeholder="Confirm password" />
                     <button type="submit">Create account</button>
                 </AutoForm>
             </div>

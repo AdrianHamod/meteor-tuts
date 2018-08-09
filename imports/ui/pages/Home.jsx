@@ -1,5 +1,5 @@
 import React from 'react';
-import Meteor from 'meteor/meteor'
+import { Meteor } from 'meteor/meteor'
 import { AutoForm, AutoField } from 'uniforms-unstyled';
 import SimpleSchema from 'simpl-schema';
 import { Link } from 'react-router-dom';

@@ -1,5 +1,5 @@
 import React from 'react';
-import Meteor from 'meteor/meteor'
+import { Meteor } from 'meteor/meteor'
 import { AutoForm, AutoField, LongTextField, SelectField } from 'uniforms-unstyled';
 import PostSchema from '/db/posts/schema';
 import PostService from '/imports/api/posts/services/PostService.js'

@@ -2,7 +2,7 @@ import React from 'react';
 import postListQuery from '/imports/api/posts/queries/PostList.js'
 import PostService from '/imports/api/posts/services/PostService.js'
 import CommentService from '/imports/api/comments/services/CommentService.js'
-import Meteor from 'meteor/meteor'
+import { Meteor } from 'meteor/meteor'
 
 
 export default class PostList extends React.Component {
